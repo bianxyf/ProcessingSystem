@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Processor</title>
+</head>
+<body>
+<p>This system processes messages containing the following data (in JSON format):</p>
+<br>
+<ul>
+    <li>Sales Type</li>
+    <li>Sales Amount</li>
+    <li>Sales Quantity</li>
+    <li>Sales Operations</li>
+</ul>
+
+Sample request:
+<p>{
+	"type":"apple",
+	"quantity" : 20,
+	"amount":"10p",
+	"operation":""
+}
+</p>
+<p><b>Assumptions made in this project:</b></p>
+1. Sales amount is always in pence (Quantity x Amount will be recorded in &#163;(Pounds))<br>
+2. If Sales operation is set, adjustments are to be made on existing record - if current 
+sale is 0, no adjustments will be made.<br>
+3. If operation is not one of the expected operations, no adjustments will be done. <br>
+Expected operations are the following:<br>
+<ul>
+	<li>ADD</li>
+	<li>SUBTRACT</li>
+	<li>MULTIPLY</li>
+</ul>
+</body>
+</html>
